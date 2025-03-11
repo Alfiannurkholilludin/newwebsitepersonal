@@ -37,7 +37,7 @@
                     <div class="tag-card">
                         <h4>New</h4>
                     </div>
-                    <div class="poster"><img src="../assets/project/work4.png" alt="img1"></div>
+                    <div class="poster"><img src="../assets/img/balifiber.png" alt="img1"></div>
                     <div class="details">
                         <h5>2024</h5>
                         <h1>Balifiber - responsive internet provider website design</h1>
