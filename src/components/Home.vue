@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="card-square">
-                            <div class="poster"><img src="../assets/project/work1.webp" alt="img4"></div>
+                            <div class="poster"><img src="../assets/img/horeka.png" alt="img4"></div>
                             <div class="details">
                                 <h5>2023 - 2024</h5>
                                 <h1>Horeka - responsive company profile website design</h1>
