@@ -8,7 +8,7 @@
                 </div>
                 <div class="mt-4">
                     <a href="/" class="block overflow-hidden transform transition duration-300">
-                    <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('https://alfiannur.netlify.app/assets/balifiber-ClkqsV1I.png');"></div>
+                    <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('../assets/background/balifiber.png');"></div>
                         <div class="p-2 sm:p-12">
                             <div class="flex justify-between">
                                 <h1 class="text-[24px] sm:text-[32px] font-[700]">Balifiber - Responsive internet provider website design</h1>
