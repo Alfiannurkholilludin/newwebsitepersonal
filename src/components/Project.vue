@@ -8,7 +8,7 @@
                 </div>
                 <div class="mt-4">
                     <a href="/" class="block overflow-hidden transform transition duration-300">
-                    <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('../assets/background/balifiber.png');"></div>
+                    <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('/vue-porto/src/assets/background/balifiber.png');"></div>
                         <div class="p-2 sm:p-12">
                             <div class="flex justify-between">
                                 <h1 class="text-[24px] sm:text-[32px] font-[700]">Balifiber - Responsive internet provider website design</h1>
@@ -20,7 +20,7 @@
                 </div>
                 <div class="mt-4">
                     <a href="/" class="block overflow-hidden transform transition duration-300">
-                        <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('https://alfiannur.netlify.app/assets/work2-BxrxmPGK.webp');"></div>
+                        <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('../assets/background/work2.webp');"></div>
                         <div class="p-2 sm:p-12">
                             <div class="flex justify-between">
                                 <h1 class="text-[24px] sm:text-[32px] font-[700]">PT PIM - Responsive Company Profile Website</h1>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="mt-4">
                     <a href="/" class="block overflow-hidden transform transition duration-300">
-                        <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('https://alfiannur.netlify.app/assets/work1-BJxYUCXj.webp');"></div>
+                        <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('../assets/background/work1.webp');"></div>
                         <div class="p-2 sm:p-12">
                             <div class="flex justify-between">
                                 <h1 class="text-[24px] sm:text-[32px] font-[700]">Balifiber Instant WiFi - Responsive Company Profile Website</h1>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="mt-4">
                     <a href="/" class="block overflow-hidden transform transition duration-300">
-                        <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('https://alfiannur.netlify.app/assets/horeka-iCOv7CoE.png');"></div>
+                        <div class="bg-cover bg-center h-[300px] sm:h-[900px]" style="background-image: url('../assets/background/horeka.png');"></div>
                         <div class="p-2 sm:p-12">
                             <div class="flex justify-between">
                                 <h1 class="text-[24px] sm:text-[32px] font-[700]">Horeka - Responsive Company Profile Website</h1>
