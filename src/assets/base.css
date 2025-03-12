@@ -19,12 +19,6 @@
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-  --color-pink: #e6308a;
-  --color-orange: #d54f01;
-  --color-blue: #0461cf;
-  --color-green: #22a53c;
-  --color-purple: #5928ed;
-  --color-red: #dc143c;
 }
 
 /* semantic color variables for this project */
@@ -56,6 +50,22 @@
   }
 }
 
+@font-face {
+  font-family: "Komigo3D-Regular";
+  src: url("../src/assets/font/Komigo3D-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "SFPRODISPLAYREGULER";
+  src: url(../assets/font/SFPRODISPLAYREGULAR.OTF) format('opentype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SFPRODISPLAYBOLD";
+  src: url(../assets/font/SFPRODISPLAYBOLD.OTF) format('opentype');
+}
+
 *,
 *::before,
 *::after {
@@ -66,14 +76,17 @@
 
 body {
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--vt-c-white-soft);
+  /* color: var(--color-text); */
+  /* background: var(--color-background); */
   transition:
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;
   font-family:
-    Helvetica Neue,
+    SFPRODISPLAYREGULER,
+    SFPRODISPLAYBOLD,
+    Komigo3D-Regular,
+    Inter,
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -83,7 +96,7 @@ body {
     Cantarell,
     'Fira Sans',
     'Droid Sans',
-    'Inter',
+    'Helvetica Neue',
     sans-serif;
   font-size: 15px;
   text-rendering: optimizeLegibility;

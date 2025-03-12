@@ -1,133 +1,125 @@
 <script setup>
-import { ref, computed } from 'vue'
-import Home from './components/Home.vue'
-import About from './components/About.vue'
-import Blog from './components/Blog.vue'
-import { createMemoryHistory, createRouter } from 'vue-router';
+import { RouterLink, RouterView } from 'vue-router'
+// import { useRouter, useRoute } from "vue-router"
 
-// const router = useRouter();
+    // const router = useRouter();
+    // const route = useRoute();
 
-// const refreshPage = () => {
-//   router.go(); // Reloads the current route
-// };
+    // const handleHomeClick = (event) => {
+    //   if (route.path === "/") {
+    //     event.preventDefault(); // Prevent Vue Router from handling the navigation
+    //     window.location.replace('/'); // Force reload
+    //   }
+    // };
 
-const refreshPageHome = () => {
-  window.location.replace('/'); // Reloads the current page
-};
-
-const routes = {
-  '/': Home,
-  '/about': About,
-  '/blog' : Blog
-}
-
-const currentPath = ref(window.location.hash)
-
-window.addEventListener('hashchange', () => {
-  currentPath.value = window.location.hash
-})
-
-const currentView = computed(() => {
-  return routes[currentPath.value.slice(1) || '/'] || NotFound
-})
-
+    function reloadPage() {
+      window.location.replace('/');
+  }
 </script>
 
 <template>
-  <nav data-aos="fade-down" data-aos-duration="1000">
-    <div class="wrapper-logo">
-      <a href="#"><img src="../src/assets/img/logodark.png" alt=""></a>
-    </div>
-    <ul>
-      <li><a href="#/" @click="refreshPageHome">Project</a></li>
-      <li><a href="#/about">About</a></li>
-      <li><a href="#/blog">Blog</a></li>
-    </ul>
-    <div class="cta-nav">
-      <a href="#">Download Resume</a>
-    </div>
-  </nav>
   <div>
-    <component :is="currentView" />
+
+    <!-- Header and Navbar -->
+    <!-- <header>
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#"><img src="./assets/logo/logodark.png" alt=""></a>
+        </div>
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+          <RouterLink to="/blog">Blog</RouterLink>
+        </nav>
+        <div class="cta_resume">
+          <a href="#">Get In Touch</a>
+        </div>
+      </div>
+    </header> -->
+
+    <!-- Responsive Navbar -->
+    <header>
+      <div class="wrapper mx-auto flex items-center justify-between p-6">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="#"><img src="./assets/logo/logodark.png" alt="Logo" class="h-8"></a>
+        </div>
+        
+        <!-- Navbar for larger screens -->
+        <nav class="hidden md:flex space-x-6 gap-6">
+          <RouterLink :to="{ name: 'home' }" @click="reloadPage" class="hover:text-gray-500">Home</RouterLink>
+          <RouterLink to="/about" class="hover:text-gray-500">About</RouterLink>
+          <RouterLink to="/blog" class="hover:text-gray-500">Blog</RouterLink>
+        </nav>
+        
+        <!-- CTA Button -->
+        <div class="hidden md:block">
+          <a href="#" class="shadow-md bg-[#0a0a0a] hover:shadow-none text-white px-4 py-2 rounded-lg">Get In Touch</a>
+        </div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none transition-transform duration-300 ease-in-out transform">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden fixed z-[99] md:hidden flex flex-col justify-evenly items-center bg-[#f8f8f8] h-full w-screen transition-all duration-300 ease-in-out transform translate-y-[-10px] opacity-0">
+        <RouterLink :to="{ name: 'home' }" @click="reloadPage" class="hover:text-gray-500 text-2xl">Home</RouterLink>
+        <RouterLink to="/about" class="hover:text-gray-500 text-2xl">About</RouterLink>
+        <RouterLink to="/blog" class="hover:text-gray-500 text-2xl">Blog</RouterLink>
+        <a href="#" class=" bg-[#0a0a0a] text-white px-4 py-2 rounded-lg text-2xl">Get In Touch</a>
+      </div>
+    </header>
+
+    <RouterView />
   </div>
 </template>
 
 <style scoped>
 
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 82px;
-  background-color: transparent;
-  padding-right: 32px;
-}
+  #mobile-menu {
+    overflow: hidden;
+  }
 
-nav ul {
-  width: 24%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 32px;
-}
+  nav a {
+    font-family: 'SFPRODISPLAYREGULER', sans-serif;
+  }
 
-nav ul li {
-  list-style: none;
-}
+  .router-link-active {
+    font-family: 'SFPRODISPLAYREGULER', sans-serif;
+    color: #a0a0a0;
+  }
 
-nav ul li a {
-  color: #0a0a0a;
-  position: relative;
-}
-
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #0a0a0a;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-.wrapper-logo {
-    display: flex;
-    width: 198px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    align-self: stretch;
-}
-
-.wrapper-logo img { 
-    width: 42px;
-    height: auto;
-}
-
-
-.cta-nav a { 
-  color: #0a0a0a;
-  padding: 16px 24px;
-  border: 1px solid #0a0a0a;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.cta-nav a:hover {
-  color: #f5f5f5;
-  background-color: #0a0a0a;
-  transition: 0.5s all ease-in;
+@media (max-width: 768px) {
+  
 }
 
 @media (min-width: 1024px) {
   
 }
 </style>
+
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    
+    menuToggle.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle("translate-y-0");
+      mobileMenu.classList.toggle("opacity-100");
+      
+      // Animate menu icon
+      if (mobileMenu.classList.contains("hidden")) {
+        menuToggle.classList.remove("rotate-90");
+      } else {
+        menuToggle.classList.add("rotate-90");
+      }
+    });
+  });
+</script>

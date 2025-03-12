@@ -1,72 +1,16 @@
 @import './base.css';
+@import "tailwindcss";
 
 #app {
-  max-width: 100%;
   margin: 0;
   padding: 0;
-  font-weight: normal;
+  background: transparent;
 }
 
-a {
-  text-decoration: none;
-  color: rgb(239, 239, 239);
-  transition: 0.4s;
-  /* padding: 3px; */
+@media (hover: hover) {
+ 
 }
-
-#myText {
-color: #0a0a0a;
-font-size: 5.5rem;
-font-weight: 400;
-text-align: center;
-text-transform: uppercase;
-font-family: 'Helvetica Neue', sans-serif;
-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-line-height: 5.9rem;
-}
-
-.char {
-    transform: translateY(215px);
-    transition: transform .6s;
-}
-
-.line {
-    display: grid;
-    place-content: center;
-}
-
-#myTextp {
-  color: #0a0a0a;
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-align: center;
-  font-family: 'Helvetica Neue', sans-serif;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  line-height: 2.5rem;
-}
-
-#myTextp2 {
-  color: #0a0a0a;
-  font-size: 1.5rem;
-  font-weight: 400;
-  text-align: center;
-  font-family: 'Helvetica Neue', sans-serif;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  line-height: 2.5rem;
-}
-
-
-
-/* @media (hover: hover) {
-  
-} */
 
 @media (min-width: 1024px) {
-  body {
-    
-  }
-
-  #app {
-    
-  }
+  
 }
