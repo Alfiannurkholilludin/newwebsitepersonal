@@ -61,25 +61,24 @@
 
 <script>
 
-
 </script>
 
 <style scoped>   
 
     .backgroundImg1 {
-        background-image: url(/images/balifiber.png);
+        background-image: url(../assets/background/balifiber.png);
     }
 
     .backgroundImg2 {
-        background-image: url(/images/work2.webp);
+        background-image: url(../assets/background/work2.webp);
     }
 
     .backgroundImg3 {
-        background-image: url(/images/work1.webp);
+        background-image: url(../assets/background/work1.webp);
     }
 
     .backgroundImg4 {
-        background-image: url(/images/horeka.png);
+        background-image: url(../assets/background/horeka.png);
     }
 
     .container_project {
