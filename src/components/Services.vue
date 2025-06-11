@@ -1,10 +1,10 @@
 <template>
     <main>
-        <section class="project p-6">
+        <section class="project p-12 max-[768px]:p-6">
             <div class="wrapper_project">
                 <div class="wrapper_header_p">
-                    <p>Our Services</p>
-                    <h1>Digital Innovation</h1>
+                    <p>My Career</p>
+                    <h1>Career Path</h1>
                     <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium laborum, esse aliquam alias doloremque ad cumque fugit quis, ex repudiandae, impedit exercitationem. Pariatur, illum? Dicta cupiditate dignissimos quisquam deleniti numquam maiores neque maxime distinctio quam ad? Harum beatae, animi aliquam facilis perferendis doloremque. Dolorum molestiae cumque a temporibus praesentium aut dolore delectus nulla magni, labore, culpa non quis porro quod rerum. Neque, ullam! Vero inventore explicabo suscipit doloribus provident ipsum tempora fugiat perspiciatis excepturi, odio sint tempore pariatur amet quod dolore voluptatum temporibus sit accusantium, iure, neque libero minima expedita? Voluptates inventore magni facere veniam, omnis recusandae? Aspernatur, voluptas excepturi.</p> -->
                 </div>
                 <div class="tt-col-xl-7">
@@ -19,7 +19,7 @@
                         <div class="tt-accordion-item anim-fadeinup">
                             <div class="tt-accordion-heading">
                                 <div class="tt-ac-head cursor-alter">
-                                    <h3 class="tt-ac-head-title">UI Design</h3>
+                                    <h3 class="tt-ac-head-title">Frontend Developer UI UX</h3>
                                     <!-- <div class="tt-accordion-subtext">Mauris mauris ante</div> -->
                                 </div>
 
@@ -30,14 +30,20 @@
                                 </div> <!-- /.tt-accordion-caret-wrap -->
                             </div> <!-- /.tt-accordion-heading -->
                             <div class="tt-accordion-content max-width-800">
-                                <p>Designing intuitive, user-centered interfaces that deliver seamless and engaging digital experiences, making every click feel just right.</p>
+                                <p>PT Bali Towerindo Sentra Tbk, September 2023 - Present<br>
+                                    Main Responsibilities:<br>
+                                    - Designed more product / solutions for client<br>
+                                    - Handled UX Process and UI design for desktop/mobile responsive version and mobile apps<br>
+                                    - Translated concepts into user flows, wireframes, mockups, and prototyping<br>
+                                    - Analyzed user problems, business goals, and user goals in the early phase product/feature development<br>
+                                    - Defined innovative solutions for the product direction, visuals, and experience.</p>
                             </div> <!-- /.tt-accordion-content -->
                         </div> <!-- /.tt-accordion-item -->
 
                         <div class="tt-accordion-item anim-fadeinup">
                             <div class="tt-accordion-heading">
                                 <div class="tt-ac-head cursor-alter">
-                                    <h3 class="tt-ac-head-title">Digital Strategy</h3>
+                                    <h3 class="tt-ac-head-title">UI UX Designer</h3>
                                     <!-- <div class="tt-accordion-subtext">Vivamus nisi</div> -->
                                 </div>
 
@@ -48,14 +54,18 @@
                                 </div> <!-- /.tt-accordion-caret-wrap -->
                             </div> <!-- /.tt-accordion-heading -->
                             <div class="tt-accordion-content max-width-800">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint ratione quae iste quod dolores dolorem illum obcaecati deleniti omnis id porro molestias repellat quia, excepturi deserunt ex quo totam optio fugiat doloremque sunt. Deserunt sapiente, rem veniam impedit aut consequatur eaque repellendus. Officia earum, quod consequuntur provident qui officiis.</p>
+                                <p>Yubi Technology, January 2023 - September 2023.<br>
+                                    Main Responsibilities:<br>
+                                    - Create Design System<br>
+                                    - Create User Interface Application POS (Point Of Sales)<br>
+                                    - Create User Interface Website and Application Manufacturing Management (PT Anugerah Cipta Moulding Indonesia).</p>
                             </div> <!-- /.tt-accordion-content -->
                         </div> <!-- /.tt-accordion-item -->
 
                         <div class="tt-accordion-item anim-fadeinup">
                             <div class="tt-accordion-heading">
                                 <div class="tt-ac-head cursor-alter">
-                                    <h3 class="tt-ac-head-title">Branding & Identity</h3>
+                                    <h3 class="tt-ac-head-title">Web Designer (Freelance Project)</h3>
                                     <!-- <div class="tt-accordion-subtext">Nam min proin eget</div> -->
                                 </div>
 
@@ -66,14 +76,17 @@
                                 </div> <!-- /.tt-accordion-caret-wrap -->
                             </div> <!-- /.tt-accordion-heading -->
                             <div class="tt-accordion-content max-width-800">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aspernatur culpa optio. Eius et omnis incidunt quis dignissimos. Eos, praesentium rem adipisci ab laborum harum tempore officiis autem debitis labore unde at temporibus eligendi ratione officia quasi corrupti! Esse aspernatur sunt blanditiis maxime cupiditate exercitationem libero, laboriosam fuga nostrum odio.</p>
+                                <p>PT Motekar Digital Kreasi, January 2023 - July 2023.<br>
+                                    Main Responsibilities:<br>
+                                    - Redesign Website Landing Page<br>
+                                    - Create Ui responsive for mobile and desktop view</p>
                             </div> <!-- /.tt-accordion-content -->
                         </div> <!-- /.tt-accordion-item -->
 
                         <div class="tt-accordion-item anim-fadeinup">
                             <div class="tt-accordion-heading">
                                 <div class="tt-ac-head cursor-alter">
-                                    <h3 class="tt-ac-head-title">3D Design</h3>
+                                    <h3 class="tt-ac-head-title">UI Designer (Freelance Project)</h3>
                                     <!-- <div class="tt-accordion-subtext">Condimentum sit amet</div> -->
                                 </div>
 
@@ -84,7 +97,10 @@
                                 </div> <!-- /.tt-accordion-caret-wrap -->
                             </div> <!-- /.tt-accordion-heading -->
                             <div class="tt-accordion-content max-width-800">
-                                <p>Bringing depth and realism to visuals with 3D designs that stand out, offering immersive experiences and a new dimension of creativity.</p>
+                                <p>PT International Test Center, March 2022 - April 2022.<br>
+                                    Main Responsibilities:<br>
+                                    - Redesign Website Landing Page<br>
+                                    - Create Ui responsive for mobile and desktop view</p>
                             </div> <!-- /.tt-accordion-content -->
                         </div> <!-- /.tt-accordion-item -->
 

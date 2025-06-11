@@ -16,8 +16,8 @@
         </div>
       </div>
     </section>
-    <services data-color="#0a0a0a #f2f2f2"/>
     <project/>
+    <services/>
   </main>
   <!-- Back to Top Button -->
   <button id="backToTop" class="back-to-top">Back to Top</button>
@@ -30,13 +30,13 @@
     bottom: 20px;
     right: 20px;
     width: auto;
-    padding: 16px 24px;
+    padding: 8px 16px;
     height: auto;
     background: #333;
-    color: white;
+    color: #f5f5f5;
     border: none;
     border-radius: 15%;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     display: none;
     transition: opacity 0.3s;
@@ -172,7 +172,7 @@
             } else if ((i === 0 && self.direction < 0) || (i === coloredSections.length - 1 && self.direction > 0)) {
                 gsap.to("body", {
                 backgroundColor: "#f2f2f2",
-                color: "#0a0a0a",
+                color: "#181818",
                 overwrite: "auto"
                 });
             }

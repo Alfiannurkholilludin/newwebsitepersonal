@@ -1,59 +1,36 @@
 <template>
     <main>
-        <section class="container_project p-6">
+        <section class="container_project">
             <div class="wrapper_container">
-                <div class="wrapper_text_head">
-                    <p>My Work</p>
-                    <h1>Featured Project</h1>
-                </div>
-                <div class="mt-4">
-                    <a href="/" class="block overflow-hidden transform transition duration-300">
-                    <div class="bg-cover bg-center h-[300px] sm:h-[900px] backgroundImg1"></div>
-                        <div class="p-2 sm:p-12">
-                            <div class="flex justify-between">
-                                <h1 class="text-[24px] sm:text-[32px] font-[700]">Balifiber - Responsive internet provider website design</h1>
-                                <p class="text-[16px] sm:text-[24px] font-bold">2024</p>
-                            </div>
-                            <p class="mt-4 text-[16px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia recusandae consequuntur deleniti sequi ut nobis. Voluptate eos officia natus consectetur autem ad sequi fuga aspernatur totam nisi culpa sint soluta minus ut maiores eum, atque repudiandae. Quae excepturi nisi eius totam nemo, voluptas minima eum dolores ab iure nostrum vero!</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-4">
-                    <a href="/" class="block overflow-hidden transform transition duration-300">
-                        <div class="bg-cover bg-center h-[300px] sm:h-[900px] backgroundImg2"></div>
-                        <div class="p-2 sm:p-12">
-                            <div class="flex justify-between">
-                                <h1 class="text-[24px] sm:text-[32px] font-[700]">PT PIM - Responsive Company Profile Website</h1>
-                                <p class="text-[16px] sm:text-[24px] font-bold">2024</p>
-                            </div>
-                            <p class="mt-4 text-[16px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia recusandae consequuntur deleniti sequi ut nobis. Voluptate eos officia natus consectetur autem ad sequi fuga aspernatur totam nisi culpa sint soluta minus ut maiores eum, atque repudiandae. Quae excepturi nisi eius totam nemo, voluptas minima eum dolores ab iure nostrum vero!</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-4">
-                    <a href="/" class="block overflow-hidden transform transition duration-300">
-                        <div class="bg-cover bg-center h-[300px] sm:h-[900px] backgroundImg3"></div>
-                        <div class="p-2 sm:p-12">
-                            <div class="flex justify-between">
-                                <h1 class="text-[24px] sm:text-[32px] font-[700]">Balifiber Instant WiFi - Responsive Company Profile Website</h1>
-                                <p class="text-[16px] sm:text-[24px] font-bold">2024</p>
-                            </div>
-                            <p class="mt-4 text-[16px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia recusandae consequuntur deleniti sequi ut nobis. Voluptate eos officia natus consectetur autem ad sequi fuga aspernatur totam nisi culpa sint soluta minus ut maiores eum, atque repudiandae. Quae excepturi nisi eius totam nemo, voluptas minima eum dolores ab iure nostrum vero!</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-4">
-                    <a href="/" class="block overflow-hidden transform transition duration-300">
-                        <div class="bg-cover bg-center h-[300px] sm:h-[900px] backgroundImg4"></div>
-                        <div class="p-2 sm:p-12">
-                            <div class="flex justify-between">
-                                <h1 class="text-[24px] sm:text-[32px] font-[700]">Horeka - Responsive Company Profile Website</h1>
-                                <p class="text-[16px] sm:text-[24px] font-bold">2024</p>
-                            </div>
-                            <p class="mt-4 text-[16px]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia recusandae consequuntur deleniti sequi ut nobis. Voluptate eos officia natus consectetur autem ad sequi fuga aspernatur totam nisi culpa sint soluta minus ut maiores eum, atque repudiandae. Quae excepturi nisi eius totam nemo, voluptas minima eum dolores ab iure nostrum vero!</p>
-                        </div>
-                    </a>
-                </div>
+                <!-- <div class="container_card w-full h-[550px] max-[768px]:h-[850px] bg-[#181818] rounded-[50px] flex flex-row-reverse shadow-lg overflow-hidden p-12">
+                    <img class="img_card w-[450px] h-[750px] max-[768px]:h-[450px] object-cover rounded-lg" src="../assets/background/Mockup.png" alt="Image">
+                    <div class="wrapper_shot flex flex-col w-full gap-[42px]">
+                        <h2 class="text-4xl max-[768px]:text-2xl font-[700] text-gray-100">Smartcart by ITC</h2>
+                        <p class="text-gray-300 w-[55%] max-[768px]:w-fit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nulla consequatur alias labore recusandae magni earum unde exercitationem quos suscipit inventore beatae ipsa.</p>
+                        <a href="#" class="text-gray-100 p-4 bg-[#333] w-fit rounded-lg">View case study</a>
+                    </div>
+                </div> -->
+                <a href="/" class="card_wrapper w-full h-full rounded-[50px] flex flex-col overflow-hidden p-12 max-[768px]:p-4">
+                    <img class="object-cover rounded-lg w-full h-full" src="../assets/background/2.png" alt="project1">
+                    <div class="wrapper_shot flex flex-col w-full gap-[8px] pt-4">
+                        <h2 class="text-[28px] tracking-tight text-[#333] font-bold">SmartCart By ITC</h2>
+                        <p class="text-[18px] text-[#676767]">Product Design / App Design</p>
+                    </div>
+                </a>
+                <a href="/" class="card_wrapper w-full h-full rounded-[50px] flex flex-col overflow-hidden p-12 max-[768px]:p-4">
+                    <img class="object-cover rounded-lg w-full h-full" src="../assets/background/1.png" alt="project1">
+                    <div class="wrapper_shot flex flex-col w-full gap-[8px] pt-4">
+                        <h2 class="text-[28px] tracking-tight text-[#333] font-bold">Balifiber</h2>
+                        <p class="text-[18px] text-[#676767]">Product Design / Web Design</p>
+                    </div>
+                </a>
+                <a href="/" class="card_wrapper w-full h-full rounded-[50px] flex flex-col overflow-hidden p-12 max-[768px]:p-4">
+                    <img class="object-cover rounded-lg w-full h-full" src="../assets/background/3.png" alt="project1">
+                    <div class="wrapper_shot flex flex-col w-full gap-[8px] pt-4">
+                        <h2 class="text-[28px] tracking-tight text-[#333] font-bold">Motekar Studio</h2>
+                        <p class="text-[18px] text-[#676767]">Product Design / Web Design</p>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
@@ -65,7 +42,7 @@
 
 <style scoped>   
 
-    .backgroundImg1 {
+    /* .backgroundImg1 {
         background-image: url(../assets/background/balifiber.png);
     }
 
@@ -79,7 +56,7 @@
 
     .backgroundImg4 {
         background-image: url(../assets/background/horeka.png);
-    }
+    } */
 
     .container_project {
         width: 100%;
@@ -90,7 +67,7 @@
     .wrapper_container {
         display: flex;
         flex-direction: column;
-        gap: 82px;
+        gap: 24px;
     }
 
     .wrapper_text_head p {
@@ -106,18 +83,18 @@
     }
 
     .card {
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1rem 2rem;
         width: 100%;
-        height: 400px;
-        background-color: antiquewhite;
+        height: 550px;
+        border-radius: 50px;
+        background-color: rgb(24, 24, 24);
     }
 
-    .card .wrapper_img img {
-        width: 100%;
+    .card img {
+        width: 40%;
         height: auto;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-clip: content-box;
     }
 
     @media (max-width: 768px) {
@@ -125,5 +102,14 @@
             font-size: 32px;
         }
 
+        .container_card {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        /* .img_card {
+            width: 284px;
+            height: 650px;
+        } */
     }
 </style>

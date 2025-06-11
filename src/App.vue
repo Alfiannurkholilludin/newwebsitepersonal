@@ -54,7 +54,7 @@ import { RouterLink, RouterView } from 'vue-router'
         
         <!-- CTA Button -->
         <div class="hidden md:block">
-          <a href="#" class="shadow-md bg-[#0a0a0a] hover:shadow-none text-white px-4 py-2 rounded-lg">Get In Touch</a>
+          <a href="#" class="shadow-md bg-[#333] hover:shadow-none text-white px-4 py-2 rounded-lg">Get In Touch</a>
         </div>
         
         <!-- Mobile Menu Toggle -->
@@ -76,6 +76,13 @@ import { RouterLink, RouterView } from 'vue-router'
 
     <RouterView />
   </div>
+  <footer>
+    <section class="flex p-12 bg-[#f2f2f2] w-full h-[20px] items-center">
+      <div class="wrapper_foot">
+        <h5 class="text-[#333]">@ 2025 Designed & Developed By Alfian Nur Kholilludin</h5>
+      </div>
+    </section>
+  </footer>
 </template>
 
 <style scoped>
