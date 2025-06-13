@@ -1,6 +1,5 @@
 <script setup>
   import Project from '@/components/Project.vue';
-  import Services from '@/components/Services.vue';
 </script>
 
 <template>
@@ -17,7 +16,6 @@
       </div>
     </section>
     <project/>
-    <services/>
   </main>
   <!-- Back to Top Button -->
   <button id="backToTop" class="back-to-top">Back to Top</button>

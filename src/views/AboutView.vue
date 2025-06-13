@@ -1,11 +1,13 @@
 <script setup>
     import HeroAbout from '@/components/HeroAbout.vue';
     import IntroAbout from '@/components/IntroAbout.vue';
+    import ExperienceAbout from '@/components/ExperienceAbout.vue';
 </script>
 
 <template>
     <HeroAbout/>
     <IntroAbout/>
+    <ExperienceAbout/>
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top">Back to Top</button>
 </template>

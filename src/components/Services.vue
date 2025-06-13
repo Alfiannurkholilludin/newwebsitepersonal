@@ -1,6 +1,6 @@
 <template>
-    <main>
-        <section class="project p-12 max-[768px]:p-6">
+    <main class="p-12">
+        <section class="project w-full px-24 max-[768px]:p-6">
             <div class="wrapper_project">
                 <div class="wrapper_header_p">
                     <p>My Career</p>

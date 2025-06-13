@@ -77,7 +77,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <RouterView />
   </div>
   <footer>
-    <section class="flex p-12 bg-[#f2f2f2] w-full h-[20px] items-center">
+    <section class="flex p-12 bg-[#f2f2f2] w-full h-[10px] items-center">
       <div class="wrapper_foot">
         <h5 class="text-[#333]">@ 2025 Designed & Developed By Alfian Nur Kholilludin</h5>
       </div>
