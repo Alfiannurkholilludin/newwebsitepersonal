@@ -48,7 +48,7 @@
 
   .hero {
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     padding: 24px 16px;
     display: flex;
     flex-direction: column;

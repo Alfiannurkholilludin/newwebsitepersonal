@@ -1,9 +1,11 @@
 <script setup>
     import HeroAbout from '@/components/HeroAbout.vue';
+    import IntroAbout from '@/components/IntroAbout.vue';
 </script>
 
 <template>
     <HeroAbout/>
+    <IntroAbout/>
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top">Back to Top</button>
 </template>
