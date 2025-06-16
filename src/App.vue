@@ -17,7 +17,11 @@ import { RouterLink, RouterView } from 'vue-router'
     }
 
     function reloadAbout() {
-      window.location.replace('/about')
+      window.location.replace('/about');
+    }
+
+    function reloadBlog() {
+      window.location.replace('/blog');
     }
 </script>
 
@@ -53,7 +57,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <nav class="hidden md:flex space-x-6 gap-6">
           <RouterLink :to="{ name: 'home' }" @click="reloadPage" class="hover:text-gray-500">Home</RouterLink>
           <RouterLink :to="{ name: 'about' }" @click="reloadAbout" class="hover:text-gray-500">About</RouterLink>
-          <RouterLink to="/blog" class="hover:text-gray-500">Blog</RouterLink>
+          <RouterLink :to="{ name: 'blog' }" @click="reloadBlog" class="hover:text-gray-500">Blog</RouterLink>
         </nav>
         
         <!-- CTA Button -->
@@ -73,7 +77,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div id="mobile-menu" class="hidden fixed z-[99] md:hidden flex flex-col justify-evenly items-center bg-[#f8f8f8] h-full w-screen transition-all duration-300 ease-in-out transform translate-y-[-10px] opacity-0">
         <RouterLink :to="{ name: 'home' }" @click="reloadPage" class="hover:text-gray-500 text-2xl">Home</RouterLink>
         <RouterLink :to="{ name: 'about' }" @click="reloadAbout" class="hover:text-gray-500 text-2xl">About</RouterLink>
-        <RouterLink to="/blog" class="hover:text-gray-500 text-2xl">Blog</RouterLink>
+        <RouterLink :to="{ name: 'blog' }" @click="reloadBlog" class="hover:text-gray-500 text-2xl">Blog</RouterLink>
         <a href="#" class=" bg-[#0a0a0a] text-white px-4 py-2 rounded-lg text-2xl">Get In Touch</a>
       </div>
     </header>
