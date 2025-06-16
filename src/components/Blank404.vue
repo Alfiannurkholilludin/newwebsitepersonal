@@ -137,6 +137,7 @@ onMounted(() => {
                 <div class="tag">Graphic Designer</div>
                 <div class="tag">Web Designer</div>
                 <div class="tag">3D Modelling</div>
+                <div class="tag">Web Development</div>
             </div>
         </section>
     </main>
@@ -145,7 +146,7 @@ onMounted(() => {
 <style>
     .tag-canvas {
     width: 100%;
-    height: 85vh;
+    height: 75vh;
     /* border: 1px solid #001d44; */
     border-radius: 8px;
     position: relative;
@@ -183,34 +184,37 @@ onMounted(() => {
 
     /* Custom colors for tags */
     .tag:nth-child(1) {
-    background-color: #0a0a0a;
+    background-color: #333;
     }
 
     .tag:nth-child(2) {
-    background-color: #0a0a0a;
+    background-color: #333;
     }
 
     .tag:nth-child(3) {
-    background-color: #0a0a0a;
+    background-color: #333;
     }
 
     .tag:nth-child(4) {
-    background-color: #0a0a0a;
+    background-color: #333;
     }
 
     .tag:nth-child(5) {
-    background-color: #0a0a0a;
+    background-color: #333;
     }
 
     .tag:nth-child(6) {
-    background-color: #0a0a0a;
+    background-color: #333;
     }
 
     .tag:nth-child(7) {
-    background-color: #0a0a0a;
+    background-color: #333;
     }
 
-    
+    .tag:nth-child(8) {
+    background-color: #333;
+    }
+
 </style>
 
 <script>
