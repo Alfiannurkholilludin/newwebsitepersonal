@@ -14,7 +14,11 @@ import { RouterLink, RouterView } from 'vue-router'
 
     function reloadPage() {
       window.location.replace('/');
-  }
+    }
+
+    function reloadAbout() {
+      window.location.replace('/about')
+    }
 </script>
 
 <template>
@@ -48,7 +52,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <!-- Navbar for larger screens -->
         <nav class="hidden md:flex space-x-6 gap-6">
           <RouterLink :to="{ name: 'home' }" @click="reloadPage" class="hover:text-gray-500">Home</RouterLink>
-          <RouterLink to="/about" class="hover:text-gray-500">About</RouterLink>
+          <RouterLink :to="{ name: 'about' }" @click="reloadAbout" class="hover:text-gray-500">About</RouterLink>
           <RouterLink to="/blog" class="hover:text-gray-500">Blog</RouterLink>
         </nav>
         
@@ -68,13 +72,13 @@ import { RouterLink, RouterView } from 'vue-router'
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden fixed z-[99] md:hidden flex flex-col justify-evenly items-center bg-[#f8f8f8] h-full w-screen transition-all duration-300 ease-in-out transform translate-y-[-10px] opacity-0">
         <RouterLink :to="{ name: 'home' }" @click="reloadPage" class="hover:text-gray-500 text-2xl">Home</RouterLink>
-        <RouterLink to="/about" class="hover:text-gray-500 text-2xl">About</RouterLink>
+        <RouterLink :to="{ name: 'about' }" @click="reloadAbout" class="hover:text-gray-500 text-2xl">About</RouterLink>
         <RouterLink to="/blog" class="hover:text-gray-500 text-2xl">Blog</RouterLink>
         <a href="#" class=" bg-[#0a0a0a] text-white px-4 py-2 rounded-lg text-2xl">Get In Touch</a>
       </div>
     </header>
 
-    <RouterView />
+    <RouterView :key="$route.fullPath"/>
   </div>
   <footer>
     <section class="flex p-12 bg-[#f2f2f2] w-full h-[10px] items-center">

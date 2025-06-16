@@ -1,5 +1,5 @@
 <template>
-    <main class="w-full h-fit">
+    <main class="container_experienceabout w-full h-fit">
         <section class="flex max-[768px]:flex-col p-12 max-[768px]:p-6 max-[768px]:gap-10">
             <div class="wrapper_textintro w-full max-[768px]:w-full">
                 <h1 class="text-[#0a0a0a] text-5xl max-[768px]:text-5xl px-24 max-[768px]:px-0 max-[768px]:leading-[62px]">My Journeys</h1>
