@@ -5,7 +5,7 @@
                 <div class="title_project">
                     <h1 class="title_text text-4xl">SmartCart By ITC</h1>
                 </div>
-                <div class="chip_project flex max-[768px]:flex-col gap-[8px]">
+                <div class="chip_project flex max-[768px]:flex-wrap gap-[8px]">
                     <h5 class="chip_project1 max-[768px]:w-fit max-[768px]:text-[14px] pr-[8px] max-[768px]:pr-[4px] pl-[8px] max-[768px]:pl-[4px] border border-gray-950 rounded-[20px]">Mobile App</h5>
                     <h5 class="chip_project2 max-[768px]:w-fit max-[768px]:text-[14px] pr-[8px] max-[768px]:pr-[4px] pl-[8px] max-[768px]:pl-[4px] border border-gray-950 rounded-[20px]">Responsive</h5>
                     <h5 class="chip_project3 max-[768px]:w-fit max-[768px]:text-[14px] pr-[8px] max-[768px]:pr-[4px] pl-[8px] max-[768px]:pl-[4px] border border-gray-950 rounded-[20px]">Web Design</h5>
