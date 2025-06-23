@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import BlogView from '../views/BlogView.vue'
-
+import Project1 from '../views/Project1.vue'
 // console.clear();
 
 const router = createRouter({
@@ -24,6 +24,11 @@ const router = createRouter({
       path: '/blog',
       name: 'blog',
       component: BlogView,
+    },
+    {
+      path: '/smartcart',
+      name: 'project1',
+      component: Project1,
     },
   ],
 })

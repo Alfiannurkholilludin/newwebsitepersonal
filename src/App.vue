@@ -50,7 +50,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="wrapper mx-auto flex items-center justify-between p-6">
         <!-- Logo -->
         <div class="logo">
-          <a href="#"><img src="./assets/logo/logodark.png" alt="Logo" class="h-8"></a>
+          <a href="/"><img src="./assets/logo/logodark.png" alt="Logo" class="h-8"></a>
         </div>
         
         <!-- Navbar for larger screens -->
@@ -62,7 +62,7 @@ import { RouterLink, RouterView } from 'vue-router'
         
         <!-- CTA Button -->
         <div class="hidden md:block">
-          <a href="#" class="shadow-md bg-[#333] hover:shadow-none text-white px-4 py-2 rounded-lg">Get In Touch</a>
+          <a href="mailto:alfiannurkholilludin@gmail.com" class="shadow-md bg-[#333] hover:shadow-none text-white px-4 py-2 rounded-lg">Get In Touch</a>
         </div>
         
         <!-- Mobile Menu Toggle -->
@@ -78,7 +78,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink :to="{ name: 'home' }" @click="reloadPage" class="hover:text-gray-500 text-2xl">Home</RouterLink>
         <RouterLink :to="{ name: 'about' }" @click="reloadAbout" class="hover:text-gray-500 text-2xl">About</RouterLink>
         <RouterLink :to="{ name: 'blog' }" @click="reloadBlog" class="hover:text-gray-500 text-2xl">Blog</RouterLink>
-        <a href="#" class=" bg-[#0a0a0a] text-white px-4 py-2 rounded-lg text-2xl">Get In Touch</a>
+        <a href="mailto:alfiannurkholilludin@gmail.com" class=" bg-[#0a0a0a] text-white px-4 py-2 rounded-lg text-2xl">Get In Touch</a>
       </div>
     </header>
 

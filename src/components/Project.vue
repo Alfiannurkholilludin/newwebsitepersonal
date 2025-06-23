@@ -10,7 +10,7 @@
                         <a href="#" class="text-gray-100 p-4 bg-[#333] w-fit rounded-lg">View case study</a>
                     </div>
                 </div> -->
-                <a href="/" class="card_wrapper w-full h-full rounded-[50px] flex flex-col overflow-hidden p-12 max-[768px]:p-4">
+                <a href="/smartcart" class="card_wrapper w-full h-full rounded-[50px] flex flex-col overflow-hidden p-12 max-[768px]:p-4">
                     <img class="object-cover rounded-lg w-full h-full" src="../assets/background/2.png" alt="project1">
                     <div class="wrapper_shot flex flex-col w-full gap-[8px] pt-4">
                         <h2 class="text-[28px] tracking-tight text-[#333] font-bold">SmartCart By ITC</h2>
