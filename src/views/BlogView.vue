@@ -1,15 +1,15 @@
-<script setup>
+<template>
+    <main>
+        <section>
+            <h1>Ini adalah Blog</h1>
+        </section>
+    </main>
+</template>
 
-    import Blank404 from '@/components/Blank404.vue' ;
+<script>
 
 </script>
 
-<template>
-  <Blank404/>
-</template>
+<style scoped>
 
-<style>
-@media (min-width: 1024px) {
-  
-}
 </style>

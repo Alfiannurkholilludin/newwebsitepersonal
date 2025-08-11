@@ -1,182 +1,215 @@
-<script setup>
-  import Project from '@/components/Project.vue';
-</script>
-
 <template>
-  <main class="">
-    <section class="hero">
-      <div class="wrapper_hero">
-        <div class="wrapper_header_h">
-          <h1>Creating Visual Journey for Digital Products</h1>
-          <p>Hi There ! I'm Alfian Nur, who passionate UI and Product Designer dedicated to crafting exceptional digital products with 3+ years experience.</p>
-        </div>
-        <div class="wrapper_cta_h">
-          <a href="#" class="cta_email">My Resume</a>
-        </div>
+  <main class="relative overflow-x-hidden">
+
+    <!-- Canvas untuk animasi background -->
+    <canvas ref="canvas" class="absolute top-0 left-0 w-full h-full z-20"></canvas>
+
+    <!-- Preloader -->
+    <div ref="preloader" class="fixed top-0 left-0 w-full h-screen z-50 bg-[#0f0f0f] text-white flex items-center justify-center text-2xl font-semibold">
+      <span ref="preloaderText">Welcome to you</span>
+    </div>
+
+    <section class="relative h-[100vh] w-full p-4 place-content-center flex flex-col gap-12 md:justify-center md:items-center z-10 ">
+      <div class="wrapper_h1 max-w-[1024px] flex flex-col gap-4 items-center">
+        <h1 class="title_hero text-4xl md:text-6xl md:text-center">Creating Visual Journey for Digital Products.</h1>
+        <p class="paraghraph_hero md:text-center w-[100%] md:w-[70%]">Hi There ! I'm Alfian Nur, who passionate UI and Product Designer dedicated to crafting exceptional digital products with 3+ years experience.</p>
+      </div>
+      <div class="wrapper_cta">
+        <a href="#" class="cta_text text-[16px] border-1 px-4 py-2 rounded-full hover:bg-[#f5f5f5] hover:text-[#0f0f0f] hover:transition hover:delay-300 hover:ease-in-out hover:duration-500 ">See my work</a>
       </div>
     </section>
-    <project/>
+    <!-- <MarqueeBrand /> -->
+    <WorkView />
   </main>
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top">Back to Top</button>
 </template>
+
+<script setup>
+  import { onMounted, ref, nextTick } from 'vue'
+  import Matter from 'matter-js'
+  import gsap from 'gsap'
+  import * as anime from 'animejs'
+  import WorkView from '@/views/WorkView.vue'
+  import MarqueeBrand from '@/components/MarqueeBrand.vue'
+
+  
+  // import anime from 'animejs'
+
+  const canvas = ref(null)
+  const isDarkMode = ref(false)
+  const preloader = ref(null)
+  const preloaderText = ref(null)
+
+  onMounted(() => {
+     // Preload reveal animation menggunakan GSAP
+    const tl = gsap.timeline()
+
+    // Reveal teks di preloader
+  tl.from(preloaderText.value, {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out',
+  })
+
+  // Slide preloader keluar
+  tl.to(preloader.value, {
+    duration: 1,
+    y: '-100%',
+    ease: 'power3.inOut',
+    delay: 0.5,
+  })
+    .set(preloader.value, { display: 'none' })
+
+    // Fade in elemen konten utama
+    .from('.wrapper_h1, .wrapper_cta', {
+      duration: 1,
+      opacity: 0,
+      y: 50,
+      stagger: 0.2,
+      ease: 'power3.out',
+    }, '-=0.5')
+
+    // Tunggu sampai canvas siap
+  nextTick(() => {
+    const { Engine, Render, Runner, Bodies, Composite, Body, Events, Mouse, MouseConstraint } = Matter
+
+    const width = window.innerWidth
+    const height = window.innerHeight
+    const engine = Engine.create()
+    const world = engine.world
+
+    const render = Render.create({
+      canvas: canvas.value,
+      engine: engine,
+      options: {
+        width,
+        height,
+        background: 'transparent',
+        wireframes: false,
+        pixelRatio: window.devicePixelRatio,
+      },
+    })
+
+    const tools = ['UI/UX Design', 'Website Designing', 'App Designing', 'User Flow', 'Usability Testing', 'Prototyping', 'User Research']
+    const pills = []
+
+    for (let i = 0; i < tools.length; i++) {
+      const tool = tools[i]
+      const pill = Bodies.rectangle(
+        Math.random() * width,
+        Math.random() * height,
+        180,
+        40,
+        {
+          chamfer: { radius: 20 },
+          render: {
+            fillStyle: `#333333`,
+          },
+          frictionAir: 0.02,
+          label: tool,
+        }
+      )
+      Body.rotate(pill, Math.random() * Math.PI)
+      pills.push(pill)
+      Composite.add(world, pill)
+    }
+
+    const wallThickness = 100
+    const walls = [
+      Bodies.rectangle(width / 2, -wallThickness / 2, width, wallThickness, { isStatic: true }),
+      Bodies.rectangle(width / 2, height + wallThickness / 2, width, wallThickness, { isStatic: true }),
+      Bodies.rectangle(-wallThickness / 2, height / 2, wallThickness, height, { isStatic: true }),
+      Bodies.rectangle(width + wallThickness / 2, height / 2, wallThickness, height, { isStatic: true }),
+    ]
+    Composite.add(world, walls)
+
+    // Mouse interaksi
+    const mouse = Mouse.create(render.canvas)
+    const mouseConstraint = MouseConstraint.create(engine, {
+      mouse,
+      constraint: {
+        stiffness: 0.2,
+        render: { visible: true },
+      },
+    })
+    Composite.add(world, mouseConstraint)
+    render.mouse = mouse
+
+    Render.run(render)
+    const runner = Runner.create()
+    Runner.run(runner, engine)
+
+    Events.on(render, 'afterRender', () => {
+      const ctx = render.context
+      ctx.font = '16px sans-serif'
+      ctx.fillStyle = isDarkMode.value ? '#000000' : '#ffffff'
+      ctx.textAlign = 'center'
+      ctx.textBaseline = 'middle'
+      pills.forEach(pill => {
+        const { position, angle, label } = pill
+        ctx.save()
+        ctx.translate(position.x, position.y)
+        ctx.rotate(angle)
+        ctx.fillText(label, 0, 0)
+        ctx.restore()
+      })
+    })
+
+    const updatePillColors = () => {
+      pills.forEach(pill => {
+        pill.render.fillStyle = isDarkMode.value ? '#f5f5f5' : '#333333'
+      })
+    }
+
+    const html = document.documentElement
+    const observer = new MutationObserver(() => {
+      isDarkMode.value = html.classList.contains('dark')
+      updatePillColors()
+    })
+    observer.observe(html, { attributes: true, attributeFilter: ['class'] })
+
+    isDarkMode.value = html.classList.contains('dark')
+    updatePillColors()
+
+    // Responsif saat resize layar
+    window.addEventListener('resize', () => {
+      render.canvas.width = window.innerWidth
+      render.canvas.height = window.innerHeight
+      render.options.width = window.innerWidth
+      render.options.height = window.innerHeight
+      // Update mouse constraint agar posisi mouse benar
+      mouse.pixelRatio = window.devicePixelRatio
+    })
+  })
+})
+
+</script>
 
 <style scoped>
 
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: auto;
-    padding: 8px 16px;
-    height: auto;
-    background: #333;
-    color: #f5f5f5;
-    border: none;
-    border-radius: 15%;
-    font-size: 14px;
-    cursor: pointer;
-    display: none;
-    transition: opacity 0.3s;
+  canvas {
+    display: block;
+    pointer-events: none; /* Agar mouse events tidak mengganggu interaksi */
   }
 
-  .back-to-top:hover {
-    background: #555;
-  }
-
-  .hero {
-    width: 100%;
-    height: 70vh;
-    padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .wrapper_header_h {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-  }
-
-  .wrapper_header_h h1 {
+  .title_hero {
     font-family: 'SFPRODISPLAYBOLD', sans-serif;
-    font-size: 56px;
-    text-align: center;
-    line-height: 1.4em;
+    font-weight: 700;
+    font-style: normal;
   }
 
-  .wrapper_header_h p {
+  .paraghraph_hero {
     font-family: 'SFPRODISPLAYREGULER', sans-serif;
-    text-align: center;
-    width: 70%;
-    font-size: 18px;
   }
 
-  .wrapper_cta_h {
-    display: flex;
-    justify-content: center;
+  .cta_text {
+    font-family: 'SFPRODISPLAYREGULER', sans-serif;
   }
 
-  .cta_email {
-    font-family: 'SFPRODISPLAYBOLD', sans serif;
-    padding: 4px 16px;
-    border: 1px solid #0a0a0a;
-    border-radius: 8px;
-    margin-top: 16px
-  }
-
-  @media (max-width: 768px) {
-    .wrapper_header_h {
-      justify-content: start;
-    }
-
-    .wrapper_header_h h1 {
-      font-size: 48px;
-      text-align: start;
-    }
-
-    .wrapper_header_h p {
-      text-align: start;
-      width: 100%;
-    }
-
-    .wrapper_cta_h {
-      justify-content: start;
-    }
+  /* Awal hidden untuk GSAP */
+  .wrapper_h1,
+  .wrapper_cta {
+    opacity: 1;
+    transform: translateY(30px);
   }
 </style>
-
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // GSAP Scroll Animation
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray(".wrapper_hero, .text_h, .animate-pop, .container_project").forEach((section) => {
-      gsap.from(section, {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 80%",
-          // toggleActions: "play none none reverse"
-        }
-      });
-    });
-
-    // JavaScript untuk menangani tombol Back to Top
-    const backToTopButton = document.getElementById("backToTop");
-
-    window.onscroll = function () {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        backToTopButton.style.display = "block";
-      } else {
-        backToTopButton.style.display = "none";
-      }
-    };
-
-    backToTopButton.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    });
-
-    let coloredSections = gsap.utils.toArray("[data-color]");
-        coloredSections.forEach((section, i) => {
-        // grab the colors from the attribute
-        let [bgColor, color] = section.getAttribute("data-color").split(" ");
-        ScrollTrigger.create({
-            trigger: section,
-            start: "50 bottom",
-            end: "+=400%",
-            markers: false,
-            onToggle: self => {
-            // whenever we enter a section from either direction (scrolling up or down), animate to its color
-            if (self.isActive) {
-                gsap.to("body", {
-                backgroundColor: bgColor,
-                color: color,
-                overwrite: "auto",
-                });
-            // when we LEAVE the very first section scrolling in reverse -OR- when we scroll past the very last section (forward), return to the "normal" colors
-            } else if ((i === 0 && self.direction < 0) || (i === coloredSections.length - 1 && self.direction > 0)) {
-                gsap.to("body", {
-                backgroundColor: "#f2f2f2",
-                color: "#181818",
-                overwrite: "auto"
-                });
-            }
-          }
-        });
-      });
-
-  });
-</script>
